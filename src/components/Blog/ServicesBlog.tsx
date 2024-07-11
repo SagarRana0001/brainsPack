@@ -22,7 +22,7 @@ const ServicesBlog = ({ blog }: { blog: Blog }) => {
               {title}
             </Link>
           </h3>
-          <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
+          <p className=" border-body-color  text-base font-medium text-body-color ">
             {paragraph}
           </p>
         </div>

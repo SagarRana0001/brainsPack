@@ -1,5 +1,6 @@
 import ServicesBlog from "@/components/Blog/ServicesBlog";
 import servicesData from "@/components/Blog/servicesData";
+import ServicesSectionMiddel from "@/components/Blog/sevicesMiddel";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
@@ -29,6 +30,11 @@ const Services = () => {
                 <ServicesBlog blog={blog} />
               </div>
             ))}
+          </div>
+        </div>
+        <div className="container">
+          <div className=" flex flex-wrap justify-center">
+            <ServicesSectionMiddel />
           </div>
         </div>
       </section>
