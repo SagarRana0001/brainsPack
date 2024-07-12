@@ -23,7 +23,7 @@ const menuData: Menu[] = [
       {
         id: 41,
         title: "Web Development",
-        path: "/blog-sidebar",
+        path: "/services/webDevelopment",
         newTab: false,
         submenu: [
           {
@@ -49,13 +49,13 @@ const menuData: Menu[] = [
       {
         id: 42,
         title: "UI/UX Designing",
-        path: "/blog-details",
+        path: "/services/ui-ux-designing",
         newTab: false,
       },
       {
         id: 43,
         title: "Mobile App Development",
-        path: "/blog-sidebar",
+        path: "/services/mobile-application",
         newTab: false,
       },
       {
