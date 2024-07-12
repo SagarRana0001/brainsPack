@@ -2,15 +2,19 @@ const SectionTitle = ({
   title,
   titleData,
   titleServicesData,
+  techTitle,
   paragraph,
+  techParagraph,
   width = "570px",
   center,
   mb = "100px",
 }: {
   title?: string;
   titleData?: string;
+  techTitle?: string;
   titleServicesData?: string;
   paragraph?: string;
+  techParagraph?: string;
   width?: string;
   center?: boolean;
   mb?: string;
@@ -32,6 +36,12 @@ const SectionTitle = ({
         </h2>
         <p className="text-base !leading-relaxed text-body-color md:text-lg">
           {paragraph}
+        </p>
+        <h4 className="text-md text-lg font-bold !leading-7  text-black  dark:text-white sm:text-xl md:text-[20px]">
+          {techTitle}
+        </h4>
+        <p className="text-base !leading-8 text-body-color md:text-lg">
+          {techParagraph}
         </p>
       </div>
     </>

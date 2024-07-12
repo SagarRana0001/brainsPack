@@ -5,10 +5,10 @@
 // };
 export type Blog = {
   id: number;
-  title: string;
+  title?: string;
   paragraph: string;
   image?: string;
-  icon: string;
+  icon?: string;
   // author?: Author;
   tags?: string[];
   publishDate?: string;

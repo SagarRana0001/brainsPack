@@ -9,6 +9,7 @@ import menuData from "./menuData";
 const Header = () => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [subMenu, setSubMenu] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
@@ -35,7 +36,16 @@ const Header = () => {
       setOpenIndex(index);
     }
   };
-
+  const showSubmenu = (e) => {
+    if (e.title === "Web Development") {
+      setSubMenu(true);
+    } else {
+      setSubMenu(false);
+    }
+  };
+  const leaveSubmenu = (e) => {
+    setSubMenu(false);
+  };
   const usePathName = usePathname();
 
   return (
@@ -87,7 +97,7 @@ const Header = () => {
                       <li key={index} className="group relative">
                         <Link
                           href={menuItem.path}
-                          className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                          className={`relative flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                             usePathName === menuItem.path
                               ? "text-primary dark:text-white"
                               : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
@@ -112,19 +122,49 @@ const Header = () => {
                         <>
                           {menuItem?.title === "Services" ? (
                             <div
-                              className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                              className={`submenu relative left-0 top-[62px] rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px]  lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-[62px] ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem?.submenu?.map((submenuItem, index) => (
-                                <Link
-                                  href={submenuItem.path}
-                                  key={index}
-                                  className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
-                                >
-                                  {submenuItem.title}
-                                </Link>
-                              ))}
+                              {menuItem?.submenu?.map((submenuItem, index) => {
+                                return (
+                                  <>
+                                    <Link
+                                      href={submenuItem.path}
+                                      key={index}
+                                      onMouseEnter={(e) =>
+                                        showSubmenu(submenuItem)
+                                      }
+                                      onMouseLeave={(e) =>
+                                        leaveSubmenu(submenuItem)
+                                      }
+                                      className="block rounded py-2.5 text-sm text-dark hover:bg-green-400 hover:text-white dark:text-white/70 dark:hover:text-white lg:px-3"
+                                    >
+                                      {submenuItem.title}
+                                    </Link>
+                                    {subMenu && (
+                                      <div
+                                        onMouseEnter={() => setSubMenu(true)}
+                                        className={` absolute left-[100%] top-[0px]  bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:block lg:w-[250px]  lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-[0] ${
+                                          openIndex === index
+                                            ? "block"
+                                            : "hidden"
+                                        }`}
+                                      >
+                                        {submenuItem?.submenu?.map((Item) => (
+                                          <Link
+                                            href={Item.path}
+                                            key={index}
+                                            className="block rounded py-2.5 text-sm text-dark hover:bg-green-400 hover:text-white dark:text-white/70 dark:hover:text-white lg:px-3"
+                                          >
+                                            {Item.title}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </>
+                                );
+                              })}
                             </div>
                           ) : (
                             ""

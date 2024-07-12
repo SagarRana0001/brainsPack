@@ -1,6 +1,7 @@
-import ServicesBlog from "@/components/Blog/ServicesBlog";
-import servicesData from "@/components/Blog/servicesData";
-import ServicesSectionMiddel from "@/components/Blog/sevicesMiddel";
+import ServicesBlog from "@/components/services/ServicesBlog";
+import servicesData from "@/components/services/servicesData";
+import ServicesSectionThree from "@/components/services/servicesThree";
+import ServicesSectionMiddel from "@/components/services/sevicesMiddel";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
@@ -19,7 +20,7 @@ const Services = () => {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
 
-      <section className="pb-[120px] pt-[120px]">
+      <section className=" pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             {servicesData?.map((blog) => (
@@ -37,6 +38,7 @@ const Services = () => {
             <ServicesSectionMiddel />
           </div>
         </div>
+        <ServicesSectionThree />
       </section>
     </>
   );

@@ -23,19 +23,39 @@ const menuData: Menu[] = [
       {
         id: 41,
         title: "Web Development",
-        path: "/about",
+        path: "/blog-sidebar",
         newTab: false,
+        submenu: [
+          {
+            id: 411,
+            title: "MEAN Development",
+            path: "/about",
+            newTab: false,
+          },
+          {
+            id: 412,
+            title: "MERN Development",
+            path: "/about",
+            newTab: false,
+          },
+          {
+            id: 413,
+            title: "PHP",
+            path: "/about",
+            newTab: false,
+          },
+        ],
       },
       {
         id: 42,
         title: "UI/UX Designing",
-        path: "/contact",
+        path: "/blog-details",
         newTab: false,
       },
       {
         id: 43,
         title: "Mobile App Development",
-        path: "/contact",
+        path: "/blog-sidebar",
         newTab: false,
       },
       {
@@ -46,37 +66,6 @@ const menuData: Menu[] = [
       },
       {
         id: 45,
-        title: "About Page",
-        path: "/about",
-        newTab: false,
-      },
-      {
-        id: 46,
-        title: "Contact Page",
-        path: "/contact",
-        newTab: false,
-      },
-      {
-        id: 47,
-        title: "Blog Grid Page",
-        path: "/services",
-        newTab: false,
-      },
-      {
-        id: 48,
-        title: "Blog Sidebar Page",
-        path: "/blog-sidebar",
-        newTab: false,
-      },
-      {
-        id: 49,
-        title: "Blog Details Page",
-        path: "/blog-details",
-        newTab: false,
-      },
-
-      {
-        id: 50,
         title: "Error Page",
         path: "/error",
         newTab: false,
