@@ -15,9 +15,8 @@ import ServicesSectionMiddel from "@/components/services/sevicesMiddel";
 import ServicesSectionThree from "@/components/services/servicesThree";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
-  // other metadata
+  title: "Brainspack| Shaping the Future of Business with Web",
+  description: "This is Home for Startup Nextjs ",
 };
 
 export default function Home() {
@@ -26,7 +25,7 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      {/* <Services /> */}
+
       <ServicesSectionMiddel />
       <ServicesSectionThree />
       <Video />

@@ -8,6 +8,16 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
+  const array = [
+    {
+      titleData: "Data innovations",
+      paragraph: "At Brainspack, data is not just information, its innovation.",
+    },
+    {
+      titleData: "IT solutions",
+      paragraph: "IT solution , seamlessly merging innovation with efficiency.",
+    },
+  ];
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -43,27 +53,21 @@ const AboutSectionOne = () => {
                 data-wow-delay=".15s"
               >
                 <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <SectionTitle
-                      titleData="Data innovations"
-                      paragraph="At Brainspack, data is not just information, its
-                      innovation."
-                      mb="44px"
-                    />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <SectionTitle
-                      titleData="IT solutions"
-                      paragraph="IT solution , seamlessly merging innovation with
-                      efficiency."
-                      mb="44px"
-                    />
-                  </div>
+                  {array.map((curr, index) => (
+                    <div
+                      key={index}
+                      className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2"
+                    >
+                      <SectionTitle
+                        titleData={curr.titleData}
+                        paragraph={curr.paragraph}
+                        mb="44px"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
                 <Image

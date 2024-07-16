@@ -29,19 +29,19 @@ const menuData: Menu[] = [
           {
             id: 411,
             title: "MEAN Development",
-            path: "/about",
+            path: "/mean",
             newTab: false,
           },
           {
             id: 412,
             title: "MERN Development",
-            path: "/about",
+            path: "/mern",
             newTab: false,
           },
           {
             id: 413,
             title: "PHP",
-            path: "/about",
+            path: "/php",
             newTab: false,
           },
         ],
@@ -61,7 +61,7 @@ const menuData: Menu[] = [
       {
         id: 44,
         title: "Degital Marketing",
-        path: "/contact",
+        path: "/services/digital-marketing",
         newTab: false,
       },
       {

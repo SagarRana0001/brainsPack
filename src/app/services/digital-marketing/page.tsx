@@ -6,21 +6,21 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Mobile Application | Brainspack",
-  description: "This is Mobile Application Page for Brainspack Nextjs",
+  title: "Digital Marketing | Brainspack",
+  description: "This is Digital Marketing Page for Brainspack Nextjs",
   // other metadata
 };
 
-const MobileApplication = () => {
+const DegitalMarketing = () => {
   return (
     <>
       <Breadcrumb
-        route="Services / Mobile Application"
-        pageName="Mobile Application"
+        route="Services / Digital Marketing"
+        pageName="Digital Marketing"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
     </>
   );
 };
 
-export default MobileApplication;
+export default DegitalMarketing;
