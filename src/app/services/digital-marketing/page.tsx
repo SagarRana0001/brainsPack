@@ -1,9 +1,10 @@
-import SharePost from "@/components/services/SharePost";
-import TagButton from "@/components/services/TagButton";
-import Image from "next/image";
-
 import { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import OurDevelopmentProcess from "@/components/services/webDevelopment/DevelopmentProcess";
+import DigitalSectionOne from "@/components/services/ui-ux-designing/FirstSection";
+import DigitalSecondSection from "@/components/services/ui-ux-designing/secondSection";
+import UiSectionThree from "@/components/services/mobile-application/SectionThree";
+import DigitalSectionLast from "@/components/services/digital-marketing/SectionLast";
 
 export const metadata: Metadata = {
   title: "Digital Marketing | Brainspack",
@@ -19,6 +20,11 @@ const DegitalMarketing = () => {
         pageName="Digital Marketing"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
+      <DigitalSectionOne />
+      <DigitalSecondSection />
+      <OurDevelopmentProcess />
+      <UiSectionThree />
+      <DigitalSectionLast />
     </>
   );
 };

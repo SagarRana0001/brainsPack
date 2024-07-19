@@ -39,7 +39,7 @@ const ProcessDevelopment = () => {
 
       <div className="pl-12 leading-5">
         {DevelopmentProcess.map((value, index) => (
-          <div key={index} className="relative mb-12 flex items-center gap-6">
+          <div key={index} className="relative mb-8 flex items-center gap-6">
             <div className="flex h-16 w-16 items-center justify-center rounded-[50%] border-transparent bg-green-400 text-white hover:cursor-pointer hover:bg-green-400 hover:text-[#ffff]">
               {value.icon}
             </div>
@@ -47,7 +47,7 @@ const ProcessDevelopment = () => {
               <div className="absolute bottom-[-25px] left-[7px] w-[18%] rotate-90 rounded-2xl border-[1px] border-solid border-green-400"></div>
             )}
             <div className=" flex flex-col">
-              <p className="dark:text-whiter text-[17px] font-bold leading-tight text-black">
+              <p className="text-[17px] font-bold leading-tight text-black dark:text-white">
                 {value.name}
               </p>
             </div>

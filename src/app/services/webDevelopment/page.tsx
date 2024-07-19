@@ -4,6 +4,7 @@ import WebSectionOne from "@/components/services/webDevelopment/WebDeveloper";
 import FrontEndSection from "@/components/services/webDevelopment/FrontEndSection";
 import BackEndSection from "@/components/services/webDevelopment/BackEndSection";
 import OurDevelopmentProcess from "@/components/services/webDevelopment/DevelopmentProcess";
+import WebSectionLast from "@/components/services/webDevelopment/WebSectionThree";
 
 export const metadata: Metadata = {
   title: "Web Development | Brainspack",
@@ -23,6 +24,7 @@ const WebDevelopment = () => {
       <FrontEndSection />
       <BackEndSection />
       <OurDevelopmentProcess />
+      <WebSectionLast />
     </>
   );
 };

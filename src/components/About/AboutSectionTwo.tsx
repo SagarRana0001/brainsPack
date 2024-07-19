@@ -25,7 +25,7 @@ const AboutSectionTwo = () => {
       </div>
       <div className="container">
         <div className=" bg-hero  flex flex-wrap items-center  bg-gray-200 bg-[url('/imagesBrains/backgrounds/funfact-bg-1-1.png')]  bg-cover bg-fixed bg-center bg-no-repeat pb-20 pt-10  bg-blend-luminosity ">
-          <div className="flex w-full flex-wrap items-center justify-between  px-8  lg:w-full">
+          <div className="flex w-full flex-wrap items-center justify-center px-8 md:justify-between  lg:w-full">
             <div className="text-center">
               <h1 className="mb-4 text-3xl font-bold"> Icon</h1>
               <AnimatedCounter endValue={3} duration={500} />

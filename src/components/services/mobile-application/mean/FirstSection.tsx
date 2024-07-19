@@ -1,10 +1,11 @@
 "use client";
-import { array } from "@/app/utils/constant";
+
 import SectionTitle from "@/components/Common/SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import RightArrow from "./svgIcon/RightArrow";
+import { meanArray } from "@/app/utils/constant";
+import RightArrow from "../../webDevelopment/svgIcon/RightArrow";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -12,7 +13,7 @@ const checkIcon = (
   </svg>
 );
 
-const WebSectionOne = () => {
+const MeanSectionOne = () => {
   const [subMenu, setSubMenu] = useState(false);
   const showSubmenu = (e) => {
     if (e.title === "Web Development") {
@@ -166,29 +167,28 @@ const WebSectionOne = () => {
             </div>
 
             <div className="w-full pl-4 pr-0 lg:w-[66%]">
-              <div className="relative mx-auto mb-6 aspect-[25/16]  lg:mr-0">
+              <div className="relative mx-auto mb-6 aspect-[16/9]  lg:mr-0">
                 <Image
-                  src="/imagesBrains/services/service-details-img-1.jpg"
+                  src="/imagesBrains/services/service-details-img-4.jpg"
                   alt="about-image"
                   fill
                   className="mx-auto  max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
                 <Image
-                  src="/imagesBrains/services/service-details-img-1.jpg"
+                  src="/imagesBrains/services/service-details-img-4.jpg"
                   alt="about-image"
                   fill
                   className="mx-auto hidden !h-auto max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                 />
               </div>
               <div className="mx-[-12px] flex flex-wrap">
-                {array.map((curr, index) => (
+                {meanArray.map((curr, index) => (
                   <div
                     key={index}
                     className="w-full max-w-full px-3 sm:w-full lg:w-full xl:w-full"
                   >
                     <SectionTitle
                       title={curr.title}
-                      titleData={curr.titleData}
                       paragraph={curr.paragraph}
                       mb="44px"
                       width="100%"
@@ -203,4 +203,4 @@ const WebSectionOne = () => {
     </section>
   );
 };
-export default WebSectionOne;
+export default MeanSectionOne;

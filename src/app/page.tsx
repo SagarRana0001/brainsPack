@@ -1,16 +1,13 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Blog from "@/components/services";
-import Brands from "@/components/Brands";
+// import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
-import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+// import Pricing from "@/components/Pricing";
+// import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
-import Services from "./services/page";
 import ServicesSectionMiddel from "@/components/services/sevicesMiddel";
 import ServicesSectionThree from "@/components/services/servicesThree";
 
@@ -24,17 +21,14 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
-      <Features />
 
-      <ServicesSectionMiddel />
       <ServicesSectionThree />
-      <Video />
-      <Brands />
       <AboutSectionOne />
       <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
+      {/* <Testimonials /> */}
+      {/* <Pricing /> */}
       <Blog />
+      <ServicesSectionMiddel />
       <Contact />
     </>
   );

@@ -1,10 +1,16 @@
 import Image from "next/image";
 import NewsLatterBox from "./NewsLatterBox";
+import SectionTitle from "../Common/SectionTitle";
 
 const Contact = () => {
   return (
     <section id="contact" className="overflow-hidden md:pt-20 lg:pt-28">
       <div className="container ">
+        <SectionTitle
+          title="We are ready to help"
+          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          center
+        />
         <div className="-mx-4 flex flex-wrap">
           <div className="w-[90%] px-6 lg:w-7/12 xl:w-6/12">
             <div

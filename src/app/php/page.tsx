@@ -1,5 +1,9 @@
 import { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import PhpSectionOne from "@/components/services/mobile-application/php/FirstSection";
+import OurDevelopmentProcess from "@/components/services/webDevelopment/DevelopmentProcess";
+import PhpSectionThree from "@/components/services/mobile-application/php/SectionThree";
+import PhpSectionLast from "@/components/services/mobile-application/php/SectionLast";
 
 export const metadata: Metadata = {
   title: "PHP | Brainspack",
@@ -15,6 +19,10 @@ const MeanDevelopment = () => {
         pageName="PHP Stack"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
+      <PhpSectionOne />
+      <OurDevelopmentProcess />
+      <PhpSectionThree />
+      <PhpSectionLast />
     </>
   );
 };
